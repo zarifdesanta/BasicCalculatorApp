@@ -68,7 +68,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
       {/*Header View */}
       <View style={styles.header}>
         <Text style={styles.headerText}></Text>
@@ -84,10 +84,16 @@ export default function App() {
         behavior={Platform.OS === "ios" ? "padding" : "height"}
       >
         <View style={styles.btnGroup}>
-          <Btn title="C" bgColor="gray" onClick={() => clear()}></Btn>
+          <Btn
+            title="C"
+            bgColor="gray"
+            fontColor="white"
+            onClick={() => clear()}
+          ></Btn>
           <Btn
             title="("
             bgColor="gray"
+            fontColor="white"
             w={40}
             mR={-3}
             onClick={() => handleOperator("(")}
@@ -95,6 +101,7 @@ export default function App() {
           <Btn
             title=")"
             bgColor="gray"
+            fontColor="white"
             w={40}
             mL={-3}
             onClick={() => handleOperator(")")}
@@ -102,11 +109,13 @@ export default function App() {
           <Btn
             title="%"
             bgColor="gray"
+            fontColor="white"
             onClick={() => handleOperator("%")}
           ></Btn>
           <Btn
             title="/"
             bgColor="blue"
+            fontColor="white"
             onClick={() => handleOperator("/")}
           ></Btn>
 
@@ -128,6 +137,7 @@ export default function App() {
           <Btn
             title="X"
             bgColor="blue"
+            fontColor="white"
             onClick={() => handleOperator("*")}
           ></Btn>
 
@@ -149,6 +159,7 @@ export default function App() {
           <Btn
             title="-"
             bgColor="blue"
+            fontColor="white"
             onClick={() => handleOperator("-")}
           ></Btn>
 
@@ -170,6 +181,7 @@ export default function App() {
           <Btn
             title="+"
             bgColor="blue"
+            fontColor="white"
             onClick={() => handleOperator("+")}
           ></Btn>
 
@@ -195,7 +207,7 @@ const styles = StyleSheet.create({
   container: {
     paddingTop: 0,
     margin: 0,
-    backgroundColor: "#b8d4f0",
+    backgroundColor: "black" /*b8d4f0 */,
     bottom: 1,
     position: "absolute",
     paddingBottom: 10,
@@ -214,7 +226,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     height: 280,
     width: "96%",
-    backgroundColor: "skyblue",
+    backgroundColor: "black",
     opacity: 1,
     marginTop: 20,
     borderRadius: 10,
@@ -224,14 +236,14 @@ const styles = StyleSheet.create({
   },
   equationText: {
     fontSize: 40,
-    color: "black",
+    color: "white",
     right: 1,
     alignSelf: "flex-end",
     paddingBottom: 10,
   },
   resultText: {
     fontSize: 50,
-    color: "black",
+    color: "white",
     right: 1,
     alignSelf: "flex-end",
   },

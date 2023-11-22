@@ -5,10 +5,11 @@ function Btn({
   title,
   bgColor = "skyblue",
   onClick,
-  h = 80,
-  w = 80,
+  h = 85,
+  w = 85,
   mL = 0,
   mR = 0,
+  fontColor = "black",
 }) {
   return (
     <TouchableOpacity
@@ -25,11 +26,11 @@ function Btn({
         marginLeft: mL,
         marginRight: mR,
         opacity: 0.85,
-        borderWidth: 2,
+        borderWidth: 3,
         borderColor: "black",
       }}
     >
-      <Text style={styles.btnText}>{title}</Text>
+      <Text style={{ fontSize: 35, color: fontColor }}>{title}</Text>
     </TouchableOpacity>
   );
 }
@@ -47,6 +48,7 @@ const styles = StyleSheet.create({
   },
   btnText: {
     fontSize: 35,
+    color: "white",
   },
 });
 
